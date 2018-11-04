@@ -1,12 +1,7 @@
 # Logs Analysis
 
-from loganalysisdb
-import get_db_connection
-import get_top_articles
-import get_top_authors
-import get_top_errors
-from datetime
-import datetime
+from loganalysisdb import get_db_connection, get_top_articles, get_top_authors, get_top_errors
+from datetime import datetime
 
 
 def print_top_articles(db_cursor):
