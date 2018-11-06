@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 # Logs Analysis
 
-from loganalysisdb import get_db_connection, get_top_articles, get_top_authors, get_top_errors
+from loganalysisdb import get_db_connection, get_top_articles, \
+  get_top_authors, get_top_errors
 from datetime import datetime
 
 

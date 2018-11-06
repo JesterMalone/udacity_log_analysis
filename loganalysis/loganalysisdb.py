@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # "Database code" for the news database.
 import psycopg2
 
@@ -6,8 +7,13 @@ DBNAME = "news"
 
 
 def get_db_connection():
-    dbConnect = psycopg2.connect(database=DBNAME)
-    db_cursor = dbConnect.cursor()
+
+    try:
+        dbConnect = psycopg2.connect(database=DBNAME)
+    except:
+        print ("Unable to connect to the database: " + DBNAME)
+    else:
+        db_cursor = dbConnect.cursor()
     return db_cursor
 
 
